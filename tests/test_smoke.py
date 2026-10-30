@@ -1,4 +1,4 @@
-from prometheus_smoke_test import parse_down
+from tests.prometheus_smoke import parse_down
 
 
 def test_dead_target():

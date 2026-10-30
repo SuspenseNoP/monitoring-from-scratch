@@ -25,7 +25,7 @@ cpu = CPU()
 memory = Memory()
 
 
-def render_down(*args):
+def render_metric(*args):
     metrics = []
     for item in args:
         metric = f"# HELP {item.metric_name} show {item.metric_name} usage\n# TYPE {item.metric_name} {item.type}\n{item.metric_name} {item.get_percent()}"
@@ -34,5 +34,5 @@ def render_down(*args):
 
 
 @app.get("/metrics", response_class=PlainTextResponse)
-async def root():
-    return render_down(cpu, memory)
+async def metric():
+    return render_metric(cpu, memory)
