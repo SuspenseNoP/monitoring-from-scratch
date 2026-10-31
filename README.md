@@ -1,5 +1,11 @@
 # Project: Monitoring System
+## Development setup
 
+After cloning, enable the repo's git hooks (they check commit messages against
+[Conventional Commits](https://www.conventionalcommits.org/)):
+
+    git config core.hooksPath .githooks
+    
 ## Exporter
 A Python application that renders metrics from host
 
